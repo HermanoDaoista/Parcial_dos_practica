@@ -1,8 +1,11 @@
-cat <<EOF> Filtro_Avanzado.txt
+#!/bin/bash
+
+
+cat <<EOF> awakening.txt
 > Mi ip publica es: $(curl -s ifconfig.me)
-> Mi CPU es: $(grep -i 'model name' /proc/cpuinfo |head -n1)
+> $(grep -i 'model name' /proc/cpuinfo |tail -n1 |awk '{print "CPU modelo: "$4, $6 " Frecuencia: "$9}')
 > alumno: $(whoami)
-> EOF
+EOF
 
 
-#Toca memorizar
+
