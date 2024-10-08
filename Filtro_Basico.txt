@@ -1,0 +1,2 @@
+MemTotal:        4009808 kB
+model name	: Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz

@@ -1,0 +1,3 @@
+Mi ip publica es: 181.168.78.98
+Mi CPU es: model name	: Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz
+alumno: daokong
