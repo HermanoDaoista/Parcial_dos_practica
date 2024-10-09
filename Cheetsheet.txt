@@ -1,0 +1,62 @@
+ZaraTul CheetSheet:
+
+Para la SSH en git:
+
+ssh-keygen -t rsa -b 4096 -C "comentario"
+
+#luego un cat a la ssh que se llama id_rsa
+
+cat ~/.ssh/id_rsa.pub
+
+#copiamos las letritas en github Yprofile->Settings->SSHkeys
+
+ssh -T git@github.com
+#############################################################################
+#############################################################################
+#chequeamos si ando
+
+#Recordar sacar el disco al final la instalacion de Ubuntu
+
+#Las guestadditions a veces dan problemas apt update;upgrade
+
+sudo apt install gcc make perl linux-headers-$(uname -r) build-essential
+
+#te instala todo lo que dramas te daria sin tenerlo
+#montas la iso de la vbguestadditions desde VBox
+
+sudo sh /media/tuusuario/VBox_GAs_7.0.20/VboxLinuxAdditions.run
+
+#Se instalan
+#verificas si se instalo
+
+lsmod | grep -i Vboxguest
+
+sudo reboot
+
+#proba si copia y pega
+ ############################################################################
+#############################################################################
+git config --global user.name 
+git config --global user.email
+###############################################################################
+#para comprobar las particiones
+lsblk -f    
+df -hT
+################################################################################
+###############################################################################
+#cuando creo usuario con sudo useradd -m -G grupo usuario -> en ese orden 
+#############################################################################
+#obtener el HASH para "misma contraseña que" 
+HASH=$(sudo grep $(whoami) /etc/shadow | awk -F ':' '{print $2}'}
+############################################################################
+#para agregar un usuario a un grupo
+sudo usermod -a -G grupo usuario
+sudo passwd usuario
+#cambia la contrase;a
+################################################################################
+#################################################################################
+sudo userdel -r usuario 
+#borra el user y su home
+
+
+
